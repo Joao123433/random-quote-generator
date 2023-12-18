@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: #000;
+  --text-color: #f1f1f1;
+  --stroke-color-dark-mode: rgba(255, 255, 255, 0.50);
+  --surface-color-dark-mode: rgba(255, 255, 255, 0.10);
+  --position-switch: flex-start;
+}
+
+.white {
+  --bg-color: #f1f1f1;
+  --text-color: #000;
+  --stroke-color-dark-mode: rgba(0, 0, 0, 0.50);
+  --surface-color-dark-mode: rgba(0, 0, 0, 0.05);
+  --position-switch: flex-end;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color)
+}
+
+header {
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.togle {
+  display: flex;
+  margin-right: 10px;
+}
+
+.switch {
+  transition: 1s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: var(--position-switch);
+  width: 62px;
+  height: 24px;
+  border-radius: 9999px;
+  border: 1px solid var(--stroke-color-dark-mode);
+  background: var(--surface-color-dark-mode);
+  backdrop-filter: blur(4px);
+  margin: auto;
+}
+
+.switch .handle {
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  background: var(--toggle-handle-color, #FFF);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.switch img {
+  display: inline-flex;
+  align-items: flex-start;
+  padding: 8px;
+  gap: 8px;
+  cursor: pointer;
+}
+
+main {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main h1 {
+  font-size: 3.5em;
+  font-style: italic;
+  font-family: 'Kalam', cursive;
+  margin-top: 50px;
+
+  animation-name: leftToRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+
+main p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 80vw;
+
+  animation-name: leftToRight;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+
+footer {
+  height: calc(5vh - 8px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 8px;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+@keyframes leftToRight {
+  0% {
+    filter: opacity(0);
+  }
+
+  50% {
+    filter: opacity(0.5);
+  }
+
+  100%  {
+    filter: opacity(1);
+  }
+}

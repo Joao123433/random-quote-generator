@@ -1,0 +1,2 @@
+# Random quote generator
+- Este é um gerador de citações aleatórias em TypeScript que utiliza uma API externa para buscar informações. A página exibe uma citação aleatória e permite alternar entre temas claro e escuro.

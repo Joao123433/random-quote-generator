@@ -108,10 +108,15 @@ footer {
   margin-bottom: 8px;
 }
 
+footer p {
+  font-size: 1.15rem;
+}
+
 footer a {
   text-decoration: none;
   color: var(--text-color);
   cursor: pointer;
+  font-weight: bold;
 }
 
 @keyframes leftToRight {

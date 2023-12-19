@@ -35,9 +35,9 @@ function changeTheme() {
   const btnSwitch = document.querySelector("#btnSwitch")
 
   if(html.classList.contains("white")) {
-    btnSwitch.setAttribute("src", "./assets/sun.svg")
+    btnSwitch.setAttribute("src", "./public/assets/sun.svg")
   } else {
-    btnSwitch.setAttribute("src", "./assets/moon-stars.svg")
+    btnSwitch.setAttribute("src", "./public/assets/moon-stars.svg")
   }
 }
 
